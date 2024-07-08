@@ -8,11 +8,14 @@ export default defineEventHandler(async (event) => {
   // Ensure that the request method is POST
   if (event.node.req.method === 'POST') {
     try {
-      // Read and parse the request body
-      const body = await readBody(event);
+      // Get the 'file' query parameter
+      const { file } = getQuery(event);
 
       // Define the path to the JSON file
-      const jsonFilePath = path.resolve(process.cwd(), 'data', 'data.json');
+      const jsonFilePath = path.resolve(process.cwd(), 'data', file);
+
+      // Read and parse the request body
+      const body = await readBody(event);
 
       // Write the updated data to the JSON file
       fs.writeFileSync(jsonFilePath, JSON.stringify(body, null, 2));

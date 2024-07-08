@@ -32,7 +32,7 @@ export const useJsonStore = defineStore('jsonStore', () => {
   // Update JSON data through the API
   const updateJsonData = async (updatedData) => {
     try {
-      const response = await fetch('/api/update-json', {
+      const response = await fetch('/api/update-json?file=data.json', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
