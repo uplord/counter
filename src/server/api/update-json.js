@@ -1,56 +1,29 @@
-// server/api/update-json.js
-
-import fs from 'fs';
+import { promises as fs } from 'fs';
 import path from 'path';
 
-// Define the event handler
 export default defineEventHandler(async (event) => {
-  // Ensure that the request method is POST
-  if (event.node.req.method === 'POST') {
+  const { file, update } = getQuery(event);
+  const jsonFilePath = path.resolve(process.cwd(), 'data', file); // Ensure this path is correct
 
-    let test = 0;
-    try {
-      // Get the 'file' query parameter
-      const { file } = getQuery(event);
+  try {
+    const data = await fs.readFile(jsonFilePath, 'utf-8');
+    const json = JSON.parse(data);
 
-      // Define the path to the JSON file
-      const jsonFilePath = path.resolve(process.cwd(), 'data', file);
+    // Apply updates to the JSON data
+    const updatedJson = { ...json, ...update };
 
-      // Read and parse the request body
-      const body = await readBody(event);
+    // Write the updated JSON back to the file
+    await fs.writeFile(jsonFilePath, JSON.stringify(updatedJson, null, 2), 'utf-8');
 
-      test = {
-        'jsonFilePath': jsonFilePath,
-        'body': body
-      };
-
-      // Write the updated data to the JSON file
-      fs.writeFileSync(jsonFilePath, JSON.stringify(body, null, 2));
-
-      console.log(4, 'writeFileSync')
-      test = 4;
-
-      // Respond with a success message
-      return {
-        success: true,
-        message: 'Data updated successfully!',
-      };
-    } catch (error) {
-      // Log error and respond with failure message
-      console.error('Error updating JSON file:', error);
-      return {
-        success: false,
-        message: 'Failed to update data',
-        test: test
-      };
-    }
-  } else {
-    // Method Not Allowed
-    event.node.res.setHeader('Allow', ['POST']);
-    event.node.res.statusCode = 405;
+    return {
+      success: true,
+      data: updatedJson,
+    };
+  } catch (error) {
     return {
       success: false,
-      message: `Method ${event.node.req.method} Not Allowed`,
+      message: 'Failed to update JSON file',
+      error: error.message,
     };
   }
 });
