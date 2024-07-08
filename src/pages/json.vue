@@ -3,8 +3,8 @@
     <h1>JSON Data</h1>
     <input v-model="fileUrl" type="text" placeholder="Enter JSON file URL" />
     <button @click="fetchJsonData">Load JSON Data</button>
-    <UpdateJsonForm @update-json="fetchJsonData" :file-url="fileUrl" />
     <pre>{{ jsonData }}</pre>
+    <UpdateJsonForm @update-json="fetchJsonData" :file-url="fileUrl" />
   </div>
 </template>
 
@@ -14,7 +14,7 @@ import UpdateJsonForm from '~/components/UpdateJsonForm.vue';
 
 const jsonData = ref(null);
 const errorMessage = ref('');
-const fileUrl = ref('json/data.json');
+const fileUrl = ref('data.json');
 
 const fetchJsonData = async () => {
   try {

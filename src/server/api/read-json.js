@@ -3,7 +3,7 @@ import path from 'path';
 
 export default defineEventHandler(async (event) => {
   const query = getQuery(event);
-  const jsonFilePath = path.resolve(query.file || 'data.json');
+  const jsonFilePath = path.resolve(process.cwd(), 'public', query.file || 'data.json');
 
   try {
     const data = await fs.readFile(jsonFilePath, 'utf-8');
