@@ -1,0 +1,1433 @@
+[
+    {
+        "name": "Egg",
+        "stage": "Egg",
+        "images": {
+            "hatching": [
+                "DIM_2_.PNG",
+                "DIM_3_.PNG",
+                "DIM_4_.PNG",
+                "DIM_5_.PNG",
+                "DIM_6_.PNG",
+                "DIM_7_.PNG",
+                "DIM_8_.PNG",
+                "DIM_9_.PNG"
+            ]
+        }
+    },
+    {
+        "id": "187",
+        "name": "Botamon",
+        "short_name": "bota",
+        "stage": "I",
+        "attribute": "Free",
+        "activity_type": "Normal",
+        "stats": {
+            "bp": 0,
+            "hp": 0,
+            "ap": 0,
+            "critial_hit": 0
+        },
+        "images": {
+            "name": [
+                "DIM_10_.PNG"
+            ],
+            "default": [
+                "DIM_11_.PNG",
+                "DIM_12_.PNG"
+            ],
+            "walk": [
+                "DIM_13_.PNG"
+            ],
+            "happy": [
+                "DIM_14_.PNG"
+            ],
+            "sleep": [
+                "DIM_15_.PNG"
+            ]
+        }
+    },
+    {
+        "id": "188",
+        "name": "Koromon",
+        "short_name": "koro",
+        "stage": "II",
+        "attribute": "Free",
+        "activity_type": "Normal",
+        "stats": {
+            "bp": 0,
+            "hp": 0,
+            "ap": 0,
+            "critial_hit": 0
+        },
+        "images": {
+            "name": [
+                "DIM_16_.PNG"
+            ],
+            "default": [
+                "DIM_17_.PNG",
+                "DIM_18_.PNG"
+            ],
+            "walk": [
+                "DIM_19_.PNG"
+            ],
+            "happy": [
+                "DIM_20_.PNG"
+            ],
+            "sleep": [
+                "DIM_21_.PNG"
+            ],
+            "wallpaper": [
+                "DIM_22_.PNG"
+            ]
+        },
+        "prevo": [
+            {
+                "name": "Botamon",
+                "dim": "Agumon EX, Mad Black Roar, Dinosaur Roar, Black Roar",
+                "requirements": {
+                    "deets": [
+                        "No requirements"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": "189",
+        "name": "Agumon",
+        "short_name": "agu",
+        "stage": "III",
+        "attribute": "Vaccine",
+        "activity_type": "Active",
+        "stats": {
+            "bp": "2400",
+            "hp": "1800",
+            "ap": "700",
+            "critial_hit": "2"
+        },
+        "images": {
+            "name": [
+                "DIM_23_.PNG"
+            ],
+            "default": [
+                "DIM_24_.PNG",
+                "DIM_25_.PNG"
+            ],
+            "walk": [
+                "DIM_26_.PNG",
+                "DIM_27_.PNG"
+            ],
+            "run": [
+                "DIM_28_.PNG",
+                "DIM_29_.PNG"
+            ],
+            "train": [
+                "DIM_30_.PNG",
+                "DIM_31_.PNG"
+            ],
+            "happy": [
+                "DIM_32_.PNG"
+            ],
+            "sleep": [
+                "DIM_33_.PNG"
+            ],
+            "attack": [
+                "DIM_34_.PNG",
+                "DIM_35_.PNG"
+            ],
+            "wallpaper": [
+                "DIM_36_.PNG"
+            ]
+        },
+        "prevo": [
+            {
+                "name": "Koromon",
+                "dim": "Agumon EX",
+                "requirements": {
+                    "deets": [
+                        "No requirements"
+                    ]
+                }
+            },
+            {
+                "name": "Koromon",
+                "dim": "Dinosaur Roar",
+                "requirements": {
+                    "deets": [
+                        "1,200+ Vital Values"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": "190",
+        "name": "Greymon",
+        "short_name": "grey",
+        "stage": "IV",
+        "attribute": "Vaccine",
+        "activity_type": "Active",
+        "stats": {
+            "bp": "3000",
+            "hp": "2000",
+            "ap": "900",
+            "critial_hit": "2"
+        },
+        "images": {
+            "name": [
+                "DIM_37_.PNG"
+            ],
+            "default": [
+                "DIM_38_.PNG",
+                "DIM_39_.PNG"
+            ],
+            "walk": [
+                "DIM_40_.PNG",
+                "DIM_41_.PNG"
+            ],
+            "run": [
+                "DIM_42_.PNG",
+                "DIM_43_.PNG"
+            ],
+            "train": [
+                "DIM_44_.PNG",
+                "DIM_45_.PNG"
+            ],
+            "happy": [
+                "DIM_46_.PNG"
+            ],
+            "sleep": [
+                "DIM_47_.PNG"
+            ],
+            "attack": [
+                "DIM_48_.PNG",
+                "DIM_49_.PNG"
+            ],
+            "wallpaper": [
+                "DIM_50_.PNG"
+            ]
+        },
+        "prevo": [
+            {
+                "name": "Agumon",
+                "dim": "Agumon EX",
+                "requirements": {
+                    "deets": [
+                        "5+ Trophies",
+                        "1,200+ Vital Values",
+                        "8+ Battles"
+                    ]
+                }
+            },
+            {
+                "name": "Agumon (Black)",
+                "dim": "Mad Black Roar",
+                "requirements": {
+                    "deets": [
+                        "10+ Trophies",
+                        "1,300+ Vital Values",
+                        "8+ Battles"
+                    ]
+                }
+            },
+            {
+                "name": "Agumon",
+                "dim": "Dinosaur Roar",
+                "requirements": {
+                    "deets": [
+                        "10+ Trophies",
+                        "1,300+ Vital Values",
+                        "8+ Battles"
+                    ]
+                }
+            },
+            {
+                "name": "Tinpet",
+                "dim": "Medarot",
+                "requirements": {
+                    "deets": [
+                        "10+ Trophies",
+                        "1,300+ Vital Values",
+                        "8+ Battles"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": "191",
+        "name": "Coelamon",
+        "short_name": "coela",
+        "stage": "IV",
+        "attribute": "Data",
+        "activity_type": "Normal",
+        "stats": {
+            "bp": "2400",
+            "hp": "1600",
+            "ap": "900",
+            "critial_hit": "3"
+        },
+        "images": {
+            "name": [
+                "DIM_51_.PNG"
+            ],
+            "default": [
+                "DIM_52_.PNG",
+                "DIM_53_.PNG"
+            ],
+            "walk": [
+                "DIM_54_.PNG",
+                "DIM_55_.PNG"
+            ],
+            "run": [
+                "DIM_56_.PNG",
+                "DIM_57_.PNG"
+            ],
+            "train": [
+                "DIM_58_.PNG",
+                "DIM_59_.PNG"
+            ],
+            "happy": [
+                "DIM_60_.PNG"
+            ],
+            "sleep": [
+                "DIM_61_.PNG"
+            ],
+            "attack": [
+                "DIM_62_.PNG",
+                "DIM_63_.PNG"
+            ],
+            "wallpaper": [
+                "DIM_64_.PNG"
+            ]
+        },
+        "prevo": [
+            {
+                "name": "Agumon",
+                "requirements": {
+                    "deets": [
+                        "0-2 Trophies",
+                        "0-499 Vital Values"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": "192",
+        "name": "Ogremon",
+        "short_name": "ogre",
+        "stage": "IV",
+        "attribute": "Virus",
+        "activity_type": "Stoic",
+        "stats": {
+            "bp": "2400",
+            "hp": "2000",
+            "ap": "600",
+            "critial_hit": "1"
+        },
+        "images": {
+            "name": [
+                "DIM_65_.PNG"
+            ],
+            "default": [
+                "DIM_66_.PNG",
+                "DIM_67_.PNG"
+            ],
+            "walk": [
+                "DIM_68_.PNG",
+                "DIM_69_.PNG"
+            ],
+            "run": [
+                "DIM_70_.PNG",
+                "DIM_71_.PNG"
+            ],
+            "train": [
+                "DIM_72_.PNG",
+                "DIM_73_.PNG"
+            ],
+            "happy": [
+                "DIM_74_.PNG"
+            ],
+            "sleep": [
+                "DIM_75_.PNG"
+            ],
+            "attack": [
+                "DIM_76_.PNG",
+                "DIM_77_.PNG"
+            ],
+            "wallpaper": [
+                "DIM_78_.PNG"
+            ]
+        },
+        "prevo": [
+            {
+                "name": "Agumon",
+                "requirements": {
+                    "deets": [
+                        "3+ Trophies",
+                        "500+ Vital Values"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": "193",
+        "name": "Algomon (Adult)",
+        "short_name": "algo_iv",
+        "stage": "IV",
+        "attribute": "Virus",
+        "activity_type": "Lazy",
+        "stats": {
+            "bp": "1800",
+            "hp": "1600",
+            "ap": "600",
+            "critial_hit": "5"
+        },
+        "images": {
+            "name": [
+                "DIM_79_.PNG"
+            ],
+            "default": [
+                "DIM_80_.PNG",
+                "DIM_81_.PNG"
+            ],
+            "walk": [
+                "DIM_82_.PNG",
+                "DIM_83_.PNG"
+            ],
+            "run": [
+                "DIM_84_.PNG",
+                "DIM_85_.PNG"
+            ],
+            "train": [
+                "DIM_86_.PNG",
+                "DIM_87_.PNG"
+            ],
+            "happy": [
+                "DIM_88_.PNG"
+            ],
+            "sleep": [
+                "DIM_89_.PNG"
+            ],
+            "attack": [
+                "DIM_90_.PNG",
+                "DIM_91_.PNG"
+            ],
+            "wallpaper": [
+                "DIM_92_.PNG"
+            ]
+        },
+        "localized_name": "Argomon (Champion)",
+        "prevo": [
+            {
+                "name": "Agumon",
+                "dim": "Agumon EX",
+                "requirements": {
+                    "deets": [
+                        "5+ Trophies",
+                        "800+ Vital Values",
+                        "3+ Battles"
+                    ]
+                }
+            },
+            {
+                "name": "Gabumon",
+                "dim": "Gabumon EX",
+                "requirements": {
+                    "deets": [
+                        "0-2 Trophies",
+                        "0-499 Vital Values"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": "194",
+        "name": "Metal Greymon (Vaccine)",
+        "short_name": "metalgrey_va",
+        "stage": "V",
+        "attribute": "Vaccine",
+        "activity_type": "Active",
+        "stats": {
+            "bp": "2450",
+            "hp": "2640",
+            "ap": "800",
+            "critial_hit": "2"
+        },
+        "images": {
+            "name": [
+                "DIM_93_.PNG"
+            ],
+            "default": [
+                "DIM_94_.PNG",
+                "DIM_95_.PNG"
+            ],
+            "walk": [
+                "DIM_96_.PNG",
+                "DIM_97_.PNG"
+            ],
+            "run": [
+                "DIM_98_.PNG",
+                "DIM_99_.PNG"
+            ],
+            "train": [
+                "DIM_100_.PNG",
+                "DIM_101_.PNG"
+            ],
+            "happy": [
+                "DIM_102_.PNG"
+            ],
+            "sleep": [
+                "DIM_103_.PNG"
+            ],
+            "attack": [
+                "DIM_104_.PNG",
+                "DIM_105_.PNG"
+            ],
+            "wallpaper": [
+                "DIM_106_.PNG"
+            ]
+        },
+        "localized_name": "MetalGreymon",
+        "prevo": [
+            {
+                "name": "Greymon",
+                "dim": "Agumon EX, Dinosaur Roar",
+                "requirements": {
+                    "deets": [
+                        "12+ Trophies",
+                        "3,000+ Vital Values",
+                        "15+ Battles",
+                        "70%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Algomon (Adult)",
+                "dim": "Agumon EX",
+                "requirements": {
+                    "deets": [
+                        "12+ Trophies",
+                        "3,000+ Vital Values",
+                        "15+ Battles",
+                        "70%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Coelamon",
+                "dim": "Agumon EX",
+                "requirements": {
+                    "jogress": "Jogress with Vaccine or Free Adult\r\n"
+                }
+            },
+            {
+                "name": "Ogremon",
+                "dim": "Agumon EX",
+                "requirements": {
+                    "jogress": "Jogress with Vaccine or Free Adult\r\n"
+                }
+            },
+            {
+                "name": "Dark Tyranomon",
+                "dim": "Dinosaur Roar",
+                "requirements": {
+                    "deets": [
+                        "12+ Trophies",
+                        "3,000+ Vital Values",
+                        "15+ Battles",
+                        "70%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Monochromon",
+                "dim": "Dinosaur Roar",
+                "requirements": {
+                    "jogress": "Jogress with Vaccine, Virus or Free Adult\r\n"
+                }
+            },
+            {
+                "name": "Greymon (Blue)",
+                "dim": "Dinosaur Roar",
+                "requirements": {
+                    "jogress": "Jogress with Vaccine, Data or Free Adult\r\n"
+                }
+            }
+        ]
+    },
+    {
+        "id": "195",
+        "name": "Andromon",
+        "short_name": "andro",
+        "stage": "V",
+        "attribute": "Vaccine",
+        "activity_type": "Indoor",
+        "stats": {
+            "bp": "2100",
+            "hp": "2200",
+            "ap": "600",
+            "critial_hit": "4"
+        },
+        "images": {
+            "name": [
+                "DIM_107_.PNG"
+            ],
+            "default": [
+                "DIM_108_.PNG",
+                "DIM_109_.PNG"
+            ],
+            "walk": [
+                "DIM_110_.PNG",
+                "DIM_111_.PNG"
+            ],
+            "run": [
+                "DIM_112_.PNG",
+                "DIM_113_.PNG"
+            ],
+            "train": [
+                "DIM_114_.PNG",
+                "DIM_115_.PNG"
+            ],
+            "happy": [
+                "DIM_116_.PNG"
+            ],
+            "sleep": [
+                "DIM_117_.PNG"
+            ],
+            "attack": [
+                "DIM_118_.PNG",
+                "DIM_119_.PNG"
+            ],
+            "wallpaper": [
+                "DIM_120_.PNG"
+            ]
+        },
+        "prevo": [
+            {
+                "name": "Coelamon",
+                "requirements": {
+                    "deets": [
+                        "12+ Trophies",
+                        "3,000+ Vital Values",
+                        "15+ Battles",
+                        "70%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Ogremon",
+                "requirements": {
+                    "deets": [
+                        "12+ Trophies",
+                        "3,000+ Vital Values",
+                        "15+ Battles",
+                        "70%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Greymon",
+                "requirements": {
+                    "jogress": "Jogress with Data or Free Adult\r\n"
+                }
+            },
+            {
+                "name": "Algomon (Adult)",
+                "requirements": {
+                    "jogress": "Jogress with Vaccine or Free Adult\r\n"
+                }
+            }
+        ]
+    },
+    {
+        "id": "196",
+        "name": "Anomalocarimon",
+        "short_name": "anomalocari",
+        "stage": "V",
+        "attribute": "Data",
+        "activity_type": "Lazy",
+        "stats": {
+            "bp": "2450",
+            "hp": "2200",
+            "ap": "600",
+            "critial_hit": "5"
+        },
+        "images": {
+            "name": [
+                "DIM_121_.PNG"
+            ],
+            "default": [
+                "DIM_122_.PNG",
+                "DIM_123_.PNG"
+            ],
+            "walk": [
+                "DIM_124_.PNG",
+                "DIM_125_.PNG"
+            ],
+            "run": [
+                "DIM_126_.PNG",
+                "DIM_127_.PNG"
+            ],
+            "train": [
+                "DIM_128_.PNG",
+                "DIM_129_.PNG"
+            ],
+            "happy": [
+                "DIM_130_.PNG"
+            ],
+            "sleep": [
+                "DIM_131_.PNG"
+            ],
+            "attack": [
+                "DIM_132_.PNG",
+                "DIM_133_.PNG"
+            ],
+            "wallpaper": [
+                "DIM_134_.PNG"
+            ]
+        },
+        "localized_name": "Scorpiomon",
+        "prevo": [
+            {
+                "name": "Greymon",
+                "requirements": {
+                    "deets": [
+                        "10+ Trophies",
+                        "2,500+ Vital Values",
+                        "10+ Battles",
+                        "50%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Coelamon",
+                "requirements": {
+                    "deets": [
+                        "10+ Trophies",
+                        "2,500+ Vital Values",
+                        "10+ Battles",
+                        "50%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Ogremon",
+                "requirements": {
+                    "jogress": "Jogress with Data Adult\r\n"
+                }
+            },
+            {
+                "name": "Algomon (Adult)",
+                "requirements": {
+                    "jogress": "Jogress with Data Adult\r\n"
+                }
+            }
+        ]
+    },
+    {
+        "id": "197",
+        "name": "Mamemon",
+        "short_name": "mame",
+        "stage": "V",
+        "attribute": "Data",
+        "activity_type": "Normal",
+        "stats": {
+            "bp": "2100",
+            "hp": "1760",
+            "ap": "1000",
+            "critial_hit": "3"
+        },
+        "images": {
+            "name": [
+                "DIM_135_.PNG"
+            ],
+            "default": [
+                "DIM_136_.PNG",
+                "DIM_137_.PNG"
+            ],
+            "walk": [
+                "DIM_138_.PNG",
+                "DIM_139_.PNG"
+            ],
+            "run": [
+                "DIM_140_.PNG",
+                "DIM_141_.PNG"
+            ],
+            "train": [
+                "DIM_142_.PNG",
+                "DIM_143_.PNG"
+            ],
+            "happy": [
+                "DIM_144_.PNG"
+            ],
+            "sleep": [
+                "DIM_145_.PNG"
+            ],
+            "attack": [
+                "DIM_146_.PNG",
+                "DIM_147_.PNG"
+            ],
+            "wallpaper": [
+                "DIM_148_.PNG"
+            ]
+        },
+        "prevo": [
+            {
+                "name": "Ogremon",
+                "requirements": {
+                    "deets": [
+                        "10+ Trophies",
+                        "2,500+ Vital Values",
+                        "10+ Battles",
+                        "50%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Algomon (Adult)",
+                "requirements": {
+                    "deets": [
+                        "10+ Trophies",
+                        "2,500+ Vital Values",
+                        "10+ Battles",
+                        "50%+ Win Ratio"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": "198",
+        "name": "Neo Devimon",
+        "short_name": "neodevi",
+        "stage": "V",
+        "attribute": "Virus",
+        "activity_type": "Stoic",
+        "stats": {
+            "bp": "2450",
+            "hp": "2200",
+            "ap": "600",
+            "critial_hit": "1"
+        },
+        "images": {
+            "name": [
+                "DIM_149_.PNG"
+            ],
+            "default": [
+                "DIM_150_.PNG",
+                "DIM_151_.PNG"
+            ],
+            "walk": [
+                "DIM_152_.PNG",
+                "DIM_153_.PNG"
+            ],
+            "run": [
+                "DIM_154_.PNG",
+                "DIM_155_.PNG"
+            ],
+            "train": [
+                "DIM_156_.PNG",
+                "DIM_157_.PNG"
+            ],
+            "happy": [
+                "DIM_158_.PNG"
+            ],
+            "sleep": [
+                "DIM_159_.PNG"
+            ],
+            "attack": [
+                "DIM_160_.PNG",
+                "DIM_161_.PNG"
+            ],
+            "wallpaper": [
+                "DIM_162_.PNG"
+            ]
+        },
+        "localized_name": "NeoDevimon",
+        "prevo": [
+            {
+                "name": "Coelamon",
+                "requirements": {
+                    "deets": [
+                        "6+ Trophies",
+                        "2,000+ Vital Values",
+                        "10+ Battles",
+                        "50%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Ogremon",
+                "requirements": {
+                    "deets": [
+                        "6+ Trophies",
+                        "2,000+ Vital Values",
+                        "10+ Battles",
+                        "50%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Greymon",
+                "requirements": {
+                    "jogress": "Jogress with Virus Adult\r\n"
+                }
+            }
+        ]
+    },
+    {
+        "id": "199",
+        "name": "Metal Tyranomon",
+        "short_name": "metaltyrano",
+        "stage": "V",
+        "attribute": "Virus",
+        "activity_type": "Normal",
+        "stats": {
+            "bp": "1750",
+            "hp": "2200",
+            "ap": "800",
+            "critial_hit": "3"
+        },
+        "images": {
+            "name": [
+                "DIM_163_.PNG"
+            ],
+            "default": [
+                "DIM_164_.PNG",
+                "DIM_165_.PNG"
+            ],
+            "walk": [
+                "DIM_166_.PNG",
+                "DIM_167_.PNG"
+            ],
+            "run": [
+                "DIM_168_.PNG",
+                "DIM_169_.PNG"
+            ],
+            "train": [
+                "DIM_170_.PNG",
+                "DIM_171_.PNG"
+            ],
+            "happy": [
+                "DIM_172_.PNG"
+            ],
+            "sleep": [
+                "DIM_173_.PNG"
+            ],
+            "attack": [
+                "DIM_174_.PNG",
+                "DIM_175_.PNG"
+            ],
+            "wallpaper": [
+                "DIM_176_.PNG"
+            ]
+        },
+        "localized_name": "MetalTyrannomon",
+        "prevo": [
+            {
+                "name": "Greymon",
+                "requirements": {
+                    "deets": [
+                        "6+ Trophies",
+                        "2,000+ Vital Values",
+                        "10+ Battles",
+                        "50%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Algomon (Adult)",
+                "requirements": {
+                    "deets": [
+                        "6+ Trophies",
+                        "2,000+ Vital Values",
+                        "10+ Battles",
+                        "50%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Coelamon",
+                "requirements": {
+                    "jogress": "Jogress with Virus Adult\r\n"
+                }
+            }
+        ]
+    },
+    {
+        "id": "202",
+        "name": "Blitz Greymon",
+        "short_name": "blitzgrey",
+        "stage": "VI",
+        "attribute": "Virus",
+        "activity_type": "Indoor",
+        "stats": {
+            "bp": "4250",
+            "hp": "2640",
+            "ap": "960",
+            "critial_hit": "4"
+        },
+        "images": {
+            "name": [
+                "DIM_177_.PNG"
+            ],
+            "default": [
+                "DIM_178_.PNG",
+                "DIM_179_.PNG"
+            ],
+            "walk": [
+                "DIM_180_.PNG",
+                "DIM_181_.PNG"
+            ],
+            "run": [
+                "DIM_182_.PNG",
+                "DIM_183_.PNG"
+            ],
+            "train": [
+                "DIM_184_.PNG",
+                "DIM_185_.PNG"
+            ],
+            "happy": [
+                "DIM_186_.PNG"
+            ],
+            "sleep": [
+                "DIM_187_.PNG"
+            ],
+            "attack": [
+                "DIM_188_.PNG",
+                "DIM_189_.PNG"
+            ],
+            "wallpaper": [
+                "DIM_190_.PNG"
+            ]
+        },
+        "localized_name": "BlitzGreymon",
+        "prevo": [
+            {
+                "name": "Metal Greymon (Vaccine)",
+                "requirements": {
+                    "deets": [
+                        "15+ Trophies",
+                        "4,500+ Vital Values",
+                        "15+ Battles",
+                        "70%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Anomalocarimon",
+                "requirements": {
+                    "deets": [
+                        "15+ Trophies",
+                        "4,500+ Vital Values",
+                        "15+ Battles",
+                        "70%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Mamemon",
+                "requirements": {
+                    "deets": [
+                        "15+ Trophies",
+                        "4,500+ Vital Values",
+                        "15+ Battles",
+                        "70%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Neo Devimon",
+                "requirements": {
+                    "deets": [
+                        "15+ Trophies",
+                        "4,500+ Vital Values",
+                        "15+ Battles",
+                        "70%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Andromon",
+                "requirements": {
+                    "jogress": "Jogress with Data or Free Perfect\r\n"
+                }
+            },
+            {
+                "name": "Metal Tyranomon",
+                "requirements": {
+                    "deets": [
+                        "15+ Trophies",
+                        "4,500+ Vital Values",
+                        "15+ Battles",
+                        "70%+ Win Ratio"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": "203",
+        "name": "Done Devimon",
+        "short_name": "donedevi",
+        "stage": "VI",
+        "attribute": "Virus",
+        "activity_type": "Stoic",
+        "stats": {
+            "bp": "4675",
+            "hp": "3520",
+            "ap": "960",
+            "critial_hit": "1"
+        },
+        "images": {
+            "name": [
+                "DIM_191_.PNG"
+            ],
+            "default": [
+                "DIM_192_.PNG",
+                "DIM_193_.PNG"
+            ],
+            "walk": [
+                "DIM_194_.PNG",
+                "DIM_195_.PNG"
+            ],
+            "run": [
+                "DIM_196_.PNG",
+                "DIM_197_.PNG"
+            ],
+            "train": [
+                "DIM_198_.PNG",
+                "DIM_199_.PNG"
+            ],
+            "happy": [
+                "DIM_200_.PNG"
+            ],
+            "sleep": [
+                "DIM_201_.PNG"
+            ],
+            "attack": [
+                "DIM_202_.PNG",
+                "DIM_203_.PNG"
+            ],
+            "wallpaper": [
+                "DIM_204_.PNG"
+            ]
+        },
+        "localized_name": "DoneDevimon",
+        "prevo": [
+            {
+                "name": "Andromon",
+                "requirements": {
+                    "deets": [
+                        "Stage 15 cleared",
+                        "20+ Trophies",
+                        "7,000+ Vital Values",
+                        "25+ Battles",
+                        "70%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Mamemon",
+                "requirements": {
+                    "deets": [
+                        "Stage 15 cleared",
+                        "20+ Trophies",
+                        "7,000+ Vital Values",
+                        "25+ Battles",
+                        "70%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Neo Devimon",
+                "requirements": {
+                    "deets": [
+                        "Stage 15 cleared",
+                        "20+ Trophies",
+                        "7,000+ Vital Values",
+                        "25+ Battles",
+                        "70%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Metal Greymon (Vaccine)",
+                "requirements": {
+                    "deets": [
+                        "Stage 15 cleared",
+                        "Jogress with Virus Perfect"
+                    ]
+                }
+            },
+            {
+                "name": "Anomalocarimon",
+                "requirements": {
+                    "deets": [
+                        "Stage 15 cleared",
+                        "Jogress with Virus Perfect"
+                    ]
+                }
+            },
+            {
+                "name": "Metal Tyranomon",
+                "requirements": {
+                    "deets": [
+                        "Stage 15 cleared",
+                        "Jogress with Data Perfect"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": "200",
+        "name": "War Greymon",
+        "short_name": "wargrey",
+        "stage": "VI",
+        "attribute": "Vaccine",
+        "activity_type": "Active",
+        "stats": {
+            "bp": "3825",
+            "hp": "3080",
+            "ap": "800",
+            "critial_hit": "2"
+        },
+        "images": {
+            "name": [
+                "DIM_205_.PNG"
+            ],
+            "default": [
+                "DIM_206_.PNG",
+                "DIM_207_.PNG"
+            ],
+            "walk": [
+                "DIM_208_.PNG",
+                "DIM_209_.PNG"
+            ],
+            "run": [
+                "DIM_210_.PNG",
+                "DIM_211_.PNG"
+            ],
+            "train": [
+                "DIM_212_.PNG",
+                "DIM_213_.PNG"
+            ],
+            "happy": [
+                "DIM_214_.PNG"
+            ],
+            "sleep": [
+                "DIM_215_.PNG"
+            ],
+            "attack": [
+                "DIM_216_.PNG",
+                "DIM_217_.PNG"
+            ],
+            "wallpaper": [
+                "DIM_218_.PNG"
+            ]
+        },
+        "localized_name": "WarGreymon",
+        "prevo": [
+            {
+                "name": "Metal Greymon (Vaccine)",
+                "dim": "Agumon EX",
+                "requirements": {
+                    "deets": [
+                        "10+ Trophies",
+                        "5,000+ Vital Values",
+                        "20+ Battles",
+                        "70%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Andromon",
+                "dim": "Agumon EX",
+                "requirements": {
+                    "deets": [
+                        "20+ Trophies",
+                        "5,000+ Vital Values",
+                        "20+ Battles",
+                        "70%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Anomalocarimon",
+                "dim": "Agumon EX",
+                "requirements": {
+                    "deets": [
+                        "20+ Trophies",
+                        "5,000+ Vital Values",
+                        "20+ Battles",
+                        "70%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Metal Tyranomon",
+                "dim": "Agumon EX",
+                "requirements": {
+                    "deets": [
+                        "20+ Trophies",
+                        "5,000+ Vital Values",
+                        "20+ Battles",
+                        "70%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Mamemon",
+                "dim": "Agumon EX",
+                "requirements": {
+                    "jogress": "Jogress with Vaccine or Free Perfect\r\n"
+                }
+            },
+            {
+                "name": "Neo Devimon",
+                "dim": "Agumon EX",
+                "requirements": {
+                    "jogress": "Jogress with Vaccine or Free Perfect\r\n"
+                }
+            },
+            {
+                "name": "Metal Greymon (Virus)",
+                "dim": "Mad Black Roar",
+                "requirements": {
+                    "deets": [
+                        "10+ Trophies",
+                        "4,500+ Vital Values",
+                        "15+ Battles",
+                        "50%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Metal Greymon (Vaccine)",
+                "dim": "Dinosaur Roar",
+                "requirements": {
+                    "deets": [
+                        "10+ Trophies",
+                        "4,500+ Vital Values",
+                        "15+ Battles",
+                        "50%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Vermillimon",
+                "dim": "Dinosaur Roar",
+                "requirements": {
+                    "deets": [
+                        "10+ Trophies",
+                        "4,500+ Vital Values",
+                        "15+ Battles",
+                        "50%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Skull Greymon",
+                "dim": "Dinosaur Roar",
+                "requirements": {
+                    "jogress": "Jogress with Vaccine, Data or Free Perfect\r\n"
+                }
+            }
+        ]
+    },
+    {
+        "id": "201",
+        "name": "Omegamon",
+        "short_name": "omega",
+        "stage": "VI",
+        "attribute": "Vaccine",
+        "activity_type": "Normal",
+        "stats": {
+            "bp": "5100",
+            "hp": "3080",
+            "ap": "1120",
+            "critial_hit": "3"
+        },
+        "images": {
+            "name": [
+                "DIM_219_.PNG"
+            ],
+            "default": [
+                "DIM_220_.PNG",
+                "DIM_221_.PNG"
+            ],
+            "walk": [
+                "DIM_222_.PNG",
+                "DIM_223_.PNG"
+            ],
+            "run": [
+                "DIM_224_.PNG",
+                "DIM_225_.PNG"
+            ],
+            "train": [
+                "DIM_226_.PNG",
+                "DIM_227_.PNG"
+            ],
+            "happy": [
+                "DIM_228_.PNG"
+            ],
+            "sleep": [
+                "DIM_229_.PNG"
+            ],
+            "attack": [
+                "DIM_230_.PNG",
+                "DIM_231_.PNG"
+            ],
+            "wallpaper": [
+                "DIM_232_.PNG"
+            ]
+        },
+        "localized_name": "Omnimon",
+        "prevo": [
+            {
+                "name": "War Greymon",
+                "dim": "Agumon EX",
+                "requirements": {
+                    "jogress": "Jogress with Metal Garurumon  from the Gabumon Dim\r\n"
+                }
+            },
+            {
+                "name": "Metal Garurumon",
+                "dim": "Gabumon EX",
+                "requirements": {
+                    "jogress": "Jogress with War Greymon  from the Agumon Dim\r\n"
+                }
+            },
+            {
+                "name": "War Greymon",
+                "dim": "Dinosaur Roar",
+                "requirements": {
+                    "deets": [
+                        "30+ Trophies",
+                        "8,500+ Vital Values",
+                        "30+ Battles",
+                        "70%+ Win Ratio"
+                    ]
+                }
+            },
+            {
+                "name": "Metal Garurumon",
+                "dim": "Wolf Howl",
+                "requirements": {
+                    "deets": [
+                        "30+ Trophies",
+                        "8,500+ Vital Values",
+                        "30+ Battles",
+                        "70%+ Win Ratio"
+                    ]
+                }
+            }
+        ]
+    }
+]
