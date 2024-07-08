@@ -1,29 +1,42 @@
-import { promises as fs } from 'fs';
+// server/api/update-json.js
+
+import fs from 'fs';
 import path from 'path';
 
+// Define the event handler
 export default defineEventHandler(async (event) => {
-  const body = await readBody(event);
-  const jsonFilePath = path.resolve(process.cwd(), 'data', body.file || 'data.json');
+  // Ensure that the request method is POST
+  if (event.node.req.method === 'POST') {
+    try {
+      // Read and parse the request body
+      const body = await readBody(event);
 
-  try {
-    const data = await fs.readFile(jsonFilePath, 'utf-8');
-    const json = JSON.parse(data);
+      // Define the path to the JSON file
+      const jsonFilePath = path.resolve(process.cwd(), 'data', 'data.json');
 
-    const updatedJson = { ...json, ...body };
-    delete updatedJson.file;
+      // Write the updated data to the JSON file
+      fs.writeFileSync(jsonFilePath, JSON.stringify(body, null, 2));
 
-    await fs.writeFile(jsonFilePath, JSON.stringify(updatedJson, null, 2), 'utf-8');
-
-    return {
-      success: true,
-      message: 'JSON file updated successfully',
-      data: updatedJson
-    };
-  } catch (error) {
+      // Respond with a success message
+      return {
+        success: true,
+        message: 'Data updated successfully!',
+      };
+    } catch (error) {
+      // Log error and respond with failure message
+      console.error('Error updating JSON file:', error);
+      return {
+        success: false,
+        message: 'Failed to update data',
+      };
+    }
+  } else {
+    // Method Not Allowed
+    event.node.res.setHeader('Allow', ['POST']);
+    event.node.res.statusCode = 405;
     return {
       success: false,
-      message: 'Failed to update JSON file',
-      error: error.message
+      message: `Method ${event.node.req.method} Not Allowed`,
     };
   }
 });

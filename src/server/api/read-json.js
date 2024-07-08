@@ -2,8 +2,8 @@ import { promises as fs } from 'fs';
 import path from 'path';
 
 export default defineEventHandler(async (event) => {
-  const query = getQuery(event);
-  const jsonFilePath = path.resolve(process.cwd(), 'data', query.file || 'data.json');
+  const { file } = getQuery(event);
+  const jsonFilePath = path.resolve(process.cwd(), 'data', file); // Ensure this path is correct
 
   try {
     const data = await fs.readFile(jsonFilePath, 'utf-8');
@@ -11,13 +11,13 @@ export default defineEventHandler(async (event) => {
 
     return {
       success: true,
-      data: json
+      data: json,
     };
   } catch (error) {
     return {
       success: false,
       message: 'Failed to read JSON file',
-      error: error.message
+      error: error.message,
     };
   }
 });

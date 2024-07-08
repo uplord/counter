@@ -1,4 +1,20 @@
-{
-  "key": "value",
-  "name": "Michael"
-}
+[
+  {
+    "active": false,
+    "dim": "agumon-ex",
+    "id": 200,
+    "counter": 1000
+  },
+  {
+    "active": false,
+    "dim": "ancient-warriors",
+    "id": 119,
+    "counter": 10
+  },
+  {
+    "active": true,
+    "dim": "guilmon-ex",
+    "id": null,
+    "counter": 0
+  }
+]
