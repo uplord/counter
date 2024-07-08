@@ -1,0 +1,22 @@
+{
+  "editor.fontSize": 16,
+  "debug.console.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "eslint.format.enable": true,
+  "explorer.compactFolders": false,
+  "git.autofetch": true,
+  "editor.formatOnSave": true,
+  "[less]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+}
