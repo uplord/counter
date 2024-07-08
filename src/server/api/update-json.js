@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
     };
   }
 
-  const jsonFilePath = path.resolve(process.cwd(), 'data', file); // Ensure this path is correct
+  const jsonFilePath = path.resolve(process.cwd(), 'tmp', file); // Ensure this path is correct
 
   try {
     await fs.writeFile(jsonFilePath, JSON.stringify(update, null, 2), 'utf-8');
