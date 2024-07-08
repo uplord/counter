@@ -10,15 +10,22 @@ export default defineEventHandler(async (event) => {
     try {
       // Get the 'file' query parameter
       const { file } = getQuery(event);
+      console.log(1, file)
 
       // Define the path to the JSON file
       const jsonFilePath = path.resolve(process.cwd(), 'data', file);
 
+      console.log(2, jsonFilePath)
+
       // Read and parse the request body
       const body = await readBody(event);
+      
+      console.log(3, body)
 
       // Write the updated data to the JSON file
       fs.writeFileSync(jsonFilePath, JSON.stringify(body, null, 2));
+
+      console.log(4, 'writeFileSync')
 
       // Respond with a success message
       return {
