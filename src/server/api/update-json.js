@@ -2,24 +2,29 @@ import { promises as fs } from 'fs';
 import path from 'path';
 
 export default defineEventHandler(async (event) => {
-  const { file, update } = getQuery(event);
+  const query = getQuery(event);
+  const { file } = query;
+  const update = await readBody(event);
+  
+  if (!file || !update) {
+    return {
+      success: false,
+      message: 'File and update parameters are required',
+    };
+  }
+
   const jsonFilePath = path.resolve(process.cwd(), 'data', file); // Ensure this path is correct
 
   try {
-    const data = await fs.readFile(jsonFilePath, 'utf-8');
-    const json = JSON.parse(data);
-
-    // Apply updates to the JSON data
-    const updatedJson = { ...json, ...update };
-
-    // Write the updated JSON back to the file
-    await fs.writeFile(jsonFilePath, JSON.stringify(updatedJson, null, 2), 'utf-8');
+    await fs.writeFile(jsonFilePath, JSON.stringify(update, null, 2), 'utf-8');
 
     return {
       success: true,
-      data: updatedJson,
+      message: 'Data updated successfully!',
     };
   } catch (error) {
+    console.error('Error reading or updating JSON file:', error); // Log the detailed error
+
     return {
       success: false,
       message: 'Failed to update JSON file',

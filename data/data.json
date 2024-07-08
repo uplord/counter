@@ -1,9 +1,9 @@
 [
   {
-    "active": false,
+    "active": true,
     "dim": "agumon-ex",
     "id": 200,
-    "counter": 1000
+    "counter": 100
   },
   {
     "active": false,
@@ -12,7 +12,7 @@
     "counter": 10
   },
   {
-    "active": true,
+    "active": false,
     "dim": "guilmon-ex",
     "id": null,
     "counter": 0
