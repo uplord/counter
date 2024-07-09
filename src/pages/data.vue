@@ -121,6 +121,7 @@ export default {
           });
           await dataStore.updateData(selectedItem.id, { active: true });
           current.value = selectedItem;
+          counter.value = current.value.counter;
         }
       }
     });
