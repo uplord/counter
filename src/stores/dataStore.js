@@ -16,6 +16,7 @@ export const useDataStore = defineStore('dataStore', () => {
     state.loading = true;
     state.error = null;
     console.log(111)
+    console.log(config)
     console.log(config.public.apiBaseURL + endpoint)
     try {
       const response = await fetch(config.public.apiBaseURL + endpoint);
