@@ -1,18 +1,18 @@
 import { defineStore } from 'pinia';
 import { reactive, toRefs } from 'vue';
 
-const endpoint = "/data/";
+const endpoint = "/user/";
 
-export const useDataStore = defineStore('dataStore', () => {
+export const useUserStore = defineStore('userStore', () => {
   const config = useRuntimeConfig();
 
   const state = reactive({
     data: null,
   });
 
-  const fetchData = async () => {
+  const fetchData = async (id) => {
     try {
-      const response = await fetch(`${config.public.apiBaseURL}${endpoint}`);
+      const response = await fetch(`${config.public.apiBaseURL}${endpoint}${id}`);
       if (!response.ok) {
         console.error('Network response was not ok');
       }
@@ -36,10 +36,7 @@ export const useDataStore = defineStore('dataStore', () => {
         console.error('Network response was not ok');
       }
       const updatedItem = await response.json();
-      const index = state.data.findIndex(item => item.id === id);
-      if (index !== -1) {
-        state.data[index] = updatedItem;
-      }
+      state.data = updatedItem;
     } catch (err) {
       console.error(err.message || 'Failed to update data');
     }

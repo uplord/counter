@@ -1,7 +1,9 @@
 <template>
   <div>
     <h1>Data</h1>
-    <table v-if="data.length">
+    <p v-if="user">{{ user }}</p>
+
+    <table v-if="data && data.length">
       <thead>
         <tr>
           <th>ID</th>
@@ -20,78 +22,94 @@
       </tbody>
     </table>
 
-    <form @submit.prevent="updateItem">
-      <div>
-        <label for="dim">Select Dim:</label>
-        <select v-model="selected" id="dim">
-          <option v-for="item in data" :key="item.dim" :value="item.dim">
-            {{ item.dim }}
-          </option>
-        </select>
-      </div>
-      <div>
-        <label for="counter">New Counter Value:</label>
-        <input v-model.number="counter" type="number" id="counter" required />
-      </div>
-      <button type="submit">Update Counter</button>
-    </form>
+    <p v-if="data">
+      <form @submit.prevent="update">
+        <div>
+          <label for="dim">Select Dim:</label>
+          <select v-model="selected" id="dim">
+            <option v-for="item in data" :key="item.dim" :value="item.dim">
+              {{ item.dim }}
+            </option>
+          </select>
+        </div>
+        <div>
+          <label for="counter">New Counter Value:</label>
+          <input v-model.number="counter" type="number" id="counter" required />
+        </div>
+        <button type="submit">Update Counter</button>
+      </form>
+    </p>
 
-    <div v-if="loading">Loading...</div>
-    <div v-else-if="error">{{ error }}</div>
+    <p v-if="current">{{ current }}</p>
   </div>
 </template>
 
 <script>
 import { ref, computed, onMounted, watch } from 'vue';
+import { useUserStore } from '~/stores/userStore';
 import { useDataStore } from '~/stores/dataStore';
 
 export default {
   setup() {
+    const userId = 1;
+    const userStore = useUserStore();
     const dataStore = useDataStore();
+
+    const user = computed(() => userStore.data);
+    
+    const data = computed(() => dataStore.data);
+    const current = ref(null);
+
     const counter = ref(null);
     const selected = ref(null);
-    const id = ref(null);
+    const uniqueKeyId = Date.now() + Math.random().toString(36).substring(2);
 
-    const data = computed(() => dataStore.data);
-    const loading = computed(() => dataStore.loading);
-    const error = computed(() => dataStore.error);
 
-    const updateItem = async () => {
-      const newData = { counter: counter.value };
-      await dataStore.updateData(id.value, newData);
+    const update = async () => {
+      await dataStore.updateData(current.value.id, { counter: counter.value });
     };
 
-    const fetchData = async () => {
+    onMounted(async () => {
+      await userStore.updateData(userId, {
+        key: uniqueKeyId
+      });
+      // await userStore.fetchData(userId);
+
       await dataStore.fetchData();
-      const activeItem = data.value.find(item => item.active);
-      if (activeItem) {
-        counter.value = activeItem.counter;
-        selected.value = activeItem.dim;
-        id.value = activeItem.id;
+      current.value = data.value.find(item => item.active);
+      if (!current.value) {
+        current.value = data.value[0];
+        await dataStore.updateData(current.value.id, { active: true });
       }
-    };
 
-    onMounted(fetchData);
+      counter.value = current.value.counter;
+      selected.value = current.value.dim;
+    });
 
-    watch(selected, async (dim) => {
-      const activeItem = data.value.find(item => item.active);
-      if (dim !== activeItem.dim) {
-        const selectedItem = data.value.find(item => item.dim === dim);
-        counter.value = selectedItem.counter;
-        id.value = selectedItem.id;
+    onUnmounted(() => {
+    });
 
-        await dataStore.updateData(activeItem.id, { active: false });
+    watch(selected, async () => {
+      const selectedItem = data.value.find(item => item.dim === selected.value);
+
+      if (selectedItem.id != current.value.id) {
+        data.value.forEach(async (item, index) => {
+          if (item.active == true && selectedItem.id != item.id) {
+            await dataStore.updateData(item.id, { active: false });
+          }
+        });
         await dataStore.updateData(selectedItem.id, { active: true });
+        current.value = selectedItem;
       }
     });
 
     return {
+      user,
+      data,
+      current,
       counter,
       selected,
-      data,
-      loading,
-      error,
-      updateItem
+      update
     };
   }
 };
