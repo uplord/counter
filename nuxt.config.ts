@@ -4,8 +4,7 @@ export default defineNuxtConfig({
   modules: ["@pinia/nuxt", 'nuxt-strapi-blocks-renderer'],
   runtimeConfig: {
     public: {
-      strapiApi: process.env.STRAPI_API,
-      strapiBearer: process.env.STRAPI_BEARER
+      apiBaseURL: process.env.API_BASE_URL,
     }
   },
   srcDir: "src/",
