@@ -37,14 +37,17 @@
             <label for="counter">New Counter Value:</label>
             <input v-model.number="counter" type="number" id="counter" required />
           </div>
-          <button type="submit">Update Counter</button>
+          <button type="submit" :disabled="disabled">Update Counter</button>
         </form>
+
+        <CounterView :value="counter" @update-counter="updateCounter" />
       </p>
 
       <p v-if="current">{{ current }}</p>
     </div>
     <div v-else>
       <p>Active in another tab, browser or device</p>
+      <p><a href="" @click="location.reload();">Refresh</a></p>
     </div>
   </div>
 </template>
@@ -64,19 +67,30 @@ export default {
     const data = computed(() => dataStore.data);
 
     const current = ref(null);
-    const counter = ref(null);
+    const counter = ref(0);
     const selected = ref(null);
     const uniqueKeyId = Date.now() + Math.random().toString(36).substring(2);
     const active = ref(true);
+    
+    const disabled = ref(false);
+
+    //const currentCouter = ref(1);
 
     const update = async () => {
       await userStore.fetchData(userId);
       if (user.value.key != uniqueKeyId) {
         active.value = false;
       } else {
+        disabled.value = true;
         await dataStore.updateData(current.value.id, { counter: counter.value });
+        current.value = data.value.find(item => item.active);
+        disabled.value = false;
       }
     };
+
+    const updateCounter = (newValue) => {
+      counter.value = newValue
+    }
 
     onMounted(async () => {
       await userStore.updateData(userId, { key: uniqueKeyId });
@@ -107,23 +121,24 @@ export default {
     });
 
     watch(selected, async () => {
-      await userStore.fetchData(userId);
-      if (user.value.key != uniqueKeyId) {
-        active.value = false;
-      } else {
         const selectedItem = data.value.find(item => item.dim === selected.value);
 
         if (selectedItem.id != current.value.id) {
-          data.value.forEach(async (item, index) => {
-            if (item.active == true && selectedItem.id != item.id) {
-              await dataStore.updateData(item.id, { active: false });
-            }
-          });
-          await dataStore.updateData(selectedItem.id, { active: true });
-          current.value = selectedItem;
-          counter.value = current.value.counter;
+          await userStore.fetchData(userId);
+          if (user.value.key != uniqueKeyId) {
+            active.value = false;
+          } else {
+            data.value.forEach(async (item, index) => {
+              if (item.active == true && selectedItem.id != item.id) {
+                await dataStore.updateData(item.id, { active: false });
+              }
+            });
+            await dataStore.updateData(selectedItem.id, { active: true });
+            current.value = selectedItem;
+            counter.value = current.value.counter;
+          }
         }
-      }
+
     });
 
     return {
@@ -134,6 +149,8 @@ export default {
       selected,
       update,
       active,
+      disabled,
+      updateCounter,
     };
   }
 };
